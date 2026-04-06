@@ -584,7 +584,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
 
     roc_col, importance_col = st.columns(2, gap="large")
     with roc_col:
-        st.markdown("**ROC Curve**")
+        st.markdown('<div class="divider-title">ROC Curve</div>', unsafe_allow_html=True)
         roc_curve_chart = roc_curve.copy()
         roc_curve_chart["model"] = roc_curve_chart["model"].replace(
             {
@@ -662,7 +662,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
         if feature_importance.empty:
             st.info("Feature importance is not available for the selected model.")
         else:
-            st.markdown("**Feature Importance**")
+            st.markdown('<div class="divider-title">Feature Importance</div>', unsafe_allow_html=True)
             importance_chart = feature_importance.sort_values("importance", ascending=False).copy()
             fig = px.bar(
                 importance_chart,
