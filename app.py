@@ -584,6 +584,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
 
     roc_col, importance_col = st.columns(2, gap="large")
     with roc_col:
+        st.markdown("**ROC Curve**")
         roc_curve_chart = roc_curve.copy()
         roc_curve_chart["model"] = roc_curve_chart["model"].replace(
             {
@@ -627,7 +628,6 @@ def render_model_results_page(assets: dict[str, object]) -> None:
             line=dict(color="#9ca3af", width=2, dash="dash"),
         )
         fig.update_layout(
-            title="ROC Curve on test data",
             plot_bgcolor="#ffffff",
             paper_bgcolor="#ffffff",
             height=460,
@@ -654,7 +654,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
                 xanchor="right",
                 x=0.98,
             ),
-            margin=dict(l=10, r=10, t=48, b=10),
+            margin=dict(l=10, r=10, t=10, b=10),
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -662,6 +662,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
         if feature_importance.empty:
             st.info("Feature importance is not available for the selected model.")
         else:
+            st.markdown("**Feature Importance**")
             importance_chart = feature_importance.sort_values("importance", ascending=False).copy()
             fig = px.bar(
                 importance_chart,
@@ -683,12 +684,11 @@ def render_model_results_page(assets: dict[str, object]) -> None:
                 marker_line_width=0,
             )
             fig.update_layout(
-                title="Feature Importance",
                 height=460,
                 xaxis_title="Importance",
                 yaxis_title="",
                 coloraxis_showscale=False,
-                margin=dict(l=0, r=10, t=48, b=10),
+                margin=dict(l=0, r=10, t=10, b=10),
                 plot_bgcolor="#ffffff",
                 paper_bgcolor="#ffffff",
                 yaxis=dict(categoryorder="total ascending"),
