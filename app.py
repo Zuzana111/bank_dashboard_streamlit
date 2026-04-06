@@ -270,15 +270,33 @@ def apply_custom_styles() -> None:
             }
 
             div[data-baseweb="select"] > div {
-                background: #ffffff;
-                border: 1px solid #cbd5e1;
-                border-radius: 12px;
-                box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+                background: #ffffff !important;
+                border: 1px solid #cbd5e1 !important;
+                border-radius: 12px !important;
+                box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
             }
 
-            div[data-baseweb="select"] span {
-                color: #0f172a;
-                font-weight: 600;
+            div[data-baseweb="select"] > div:hover {
+                border-color: #94a3b8 !important;
+            }
+
+            div[data-baseweb="select"] > div:focus-within {
+                border-color: #2563eb !important;
+                box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.14) !important;
+            }
+
+            div[data-baseweb="select"] *,
+            div[data-baseweb="select"] span,
+            div[data-baseweb="select"] input,
+            div[data-baseweb="select"] div {
+                background: transparent !important;
+                color: #0f172a !important;
+                font-weight: 600 !important;
+            }
+
+            div[data-baseweb="select"] svg {
+                fill: #334155 !important;
+                color: #334155 !important;
             }
 
             label[data-testid="stWidgetLabel"] p {
