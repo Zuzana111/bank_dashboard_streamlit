@@ -188,18 +188,24 @@ def apply_custom_styles() -> None:
             }
 
             div[data-testid="stMetricLabel"] {
-                color: #64748b;
                 font-weight: 700;
                 font-size: 0.82rem;
             }
 
+            div[data-testid="stMetricLabel"] p,
+            div[data-testid="stMetricLabel"] label,
+            div[data-testid="stMetricLabel"] span {
+                color: #64748b !important;
+            }
+
             div[data-testid="stMetricValue"] {
-                color: #0f172a;
                 font-weight: 800;
                 font-size: 1.45rem;
             }
 
-            div[data-testid="stMetricValue"] p {
+            div[data-testid="stMetricValue"] p,
+            div[data-testid="stMetricValue"] span {
+                color: #0f172a !important;
                 line-height: 1.15;
             }
 
