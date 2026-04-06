@@ -271,16 +271,20 @@ def apply_custom_styles() -> None:
 
             div[data-baseweb="select"] > div {
                 background: #ffffff !important;
-                border: 1px solid #cbd5e1 !important;
+                border: 1px solid #b6c6d8 !important;
                 border-radius: 12px !important;
-                box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
+                box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08) !important;
+                min-height: 48px !important;
             }
 
             div[data-baseweb="select"] > div:hover {
+                background: #ffffff !important;
                 border-color: #94a3b8 !important;
+                box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10) !important;
             }
 
             div[data-baseweb="select"] > div:focus-within {
+                background: #ffffff !important;
                 border-color: #2563eb !important;
                 box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.14) !important;
             }
