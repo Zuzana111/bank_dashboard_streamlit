@@ -1,0 +1,20 @@
+{
+  "db_path": "/Users/zuzana/Documents/codingbootcamp/projects/bank_dashboard/data/data.db",
+  "artifact_source_dir": "/Users/zuzana/Documents/codingbootcamp/projects/Case_study_final/case_study",
+  "selected_model_name": "Logistic Regression",
+  "selected_features": [
+    "has_deposits_enc",
+    "age",
+    "last_balance",
+    "min_balance",
+    "has_mortgage_enc",
+    "max_balance",
+    "mean_balance",
+    "job_enc"
+  ],
+  "notes": [
+    "Model comparison metrics come from notebook-exported CSV files.",
+    "Second-round scoring and selected clients come from notebook-exported score files.",
+    "Client-level descriptive artifacts are rebuilt from data.db using notebook-style FX conversion to CZK."
+  ]
+}

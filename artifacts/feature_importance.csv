@@ -1,0 +1,15 @@
+feature,importance,selected_for_final_model
+has_deposits_enc,0.4230295971322411,True
+age,0.10610251261948106,True
+last_balance,0.09232050011316854,True
+has_mortgage_enc,0.08900149211198373,True
+min_balance,0.08600917918258709,True
+max_balance,0.05458776317325391,True
+job_enc,0.04543821096814298,True
+mean_balance,0.04412156733928564,True
+education_enc,0.02735005274067522,False
+has_insurance_enc,0.014045780050614558,False
+marital_enc,0.013395948999426893,False
+gender_enc,0.004597395569139397,False
+loan_enc,0.0,False
+currency_enc,0.0,False
