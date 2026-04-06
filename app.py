@@ -299,6 +299,30 @@ def apply_custom_styles() -> None:
                 color: #334155 !important;
             }
 
+            div[role="listbox"],
+            ul[role="listbox"],
+            ul[data-baseweb="menu"] {
+                background: #ffffff !important;
+                color: #0f172a !important;
+                border: 1px solid #cbd5e1 !important;
+                border-radius: 12px !important;
+                box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12) !important;
+            }
+
+            div[role="option"],
+            li[role="option"],
+            ul[data-baseweb="menu"] li {
+                background: #ffffff !important;
+                color: #0f172a !important;
+            }
+
+            div[role="option"]:hover,
+            li[role="option"]:hover,
+            ul[data-baseweb="menu"] li:hover {
+                background: #eff6ff !important;
+                color: #0f172a !important;
+            }
+
             label[data-testid="stWidgetLabel"] p {
                 color: #334155;
                 font-weight: 700;
@@ -578,6 +602,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
             color="model",
             category_orders={"model": roc_order},
             color_discrete_map=roc_colors,
+            template="plotly_white",
         )
         for trace in fig.data:
             model_name = trace.name
@@ -642,6 +667,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
                     [0.45, "#60a5fa"],
                     [1.0, "#1d4ed8"],
                 ],
+                template="plotly_white",
             )
             fig.update_traces(
                 texttemplate="%{text:.3f}",
