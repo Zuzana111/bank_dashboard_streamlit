@@ -185,6 +185,7 @@ def apply_custom_styles() -> None:
                 border-radius: 18px;
                 padding: 1.05rem 1rem 0.95rem 1rem;
                 box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+                color: #0f172a !important;
             }
 
             div[data-testid="stMetricLabel"] {
@@ -192,6 +193,7 @@ def apply_custom_styles() -> None:
                 font-size: 0.82rem;
             }
 
+            div[data-testid="stMetric"] *,
             div[data-testid="stMetricLabel"] p,
             div[data-testid="stMetricLabel"] label,
             div[data-testid="stMetricLabel"] span {
@@ -203,10 +205,19 @@ def apply_custom_styles() -> None:
                 font-size: 1.45rem;
             }
 
+            div[data-testid="stMetricValue"] *,
             div[data-testid="stMetricValue"] p,
             div[data-testid="stMetricValue"] span {
                 color: #0f172a !important;
                 line-height: 1.15;
+            }
+
+            [data-testid="metric-container"] {
+                color: #0f172a !important;
+            }
+
+            [data-testid="metric-container"] * {
+                color: inherit !important;
             }
 
             .note-card {
