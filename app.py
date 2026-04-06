@@ -630,6 +630,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
             title="ROC Curve on test data",
             plot_bgcolor="#ffffff",
             paper_bgcolor="#ffffff",
+            height=460,
             font=dict(color="#0f172a"),
             xaxis=dict(
                 title="False Positive Rate",
@@ -661,7 +662,6 @@ def render_model_results_page(assets: dict[str, object]) -> None:
         if feature_importance.empty:
             st.info("Feature importance is not available for the selected model.")
         else:
-            st.markdown("**Feature Importance**")
             importance_chart = feature_importance.sort_values("importance", ascending=False).copy()
             fig = px.bar(
                 importance_chart,
@@ -683,10 +683,12 @@ def render_model_results_page(assets: dict[str, object]) -> None:
                 marker_line_width=0,
             )
             fig.update_layout(
+                title="Feature Importance",
+                height=460,
                 xaxis_title="Importance",
                 yaxis_title="",
                 coloraxis_showscale=False,
-                margin=dict(l=0, r=10, t=10, b=0),
+                margin=dict(l=0, r=10, t=48, b=10),
                 plot_bgcolor="#ffffff",
                 paper_bgcolor="#ffffff",
                 yaxis=dict(categoryorder="total ascending"),
