@@ -270,21 +270,20 @@ def apply_custom_styles() -> None:
             }
 
             div[data-baseweb="select"] > div {
-                background: #ffffff !important;
-                border: 1px solid #b6c6d8 !important;
+                background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+                border: 1px solid #c7d4e3 !important;
                 border-radius: 12px !important;
-                box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08) !important;
-                min-height: 48px !important;
+                box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08) !important;
             }
 
             div[data-baseweb="select"] > div:hover {
-                background: #ffffff !important;
+                background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
                 border-color: #94a3b8 !important;
-                box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10) !important;
+                box-shadow: 0 8px 18px rgba(15, 23, 42, 0.10) !important;
             }
 
             div[data-baseweb="select"] > div:focus-within {
-                background: #ffffff !important;
+                background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
                 border-color: #2563eb !important;
                 box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.14) !important;
             }
@@ -296,6 +295,11 @@ def apply_custom_styles() -> None:
                 background: transparent !important;
                 color: #0f172a !important;
                 font-weight: 600 !important;
+            }
+
+            div[data-baseweb="select"] input::placeholder {
+                color: #475569 !important;
+                opacity: 1 !important;
             }
 
             div[data-baseweb="select"] svg {
