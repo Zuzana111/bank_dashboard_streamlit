@@ -575,7 +575,7 @@ def render_model_results_page(assets: dict[str, object]) -> None:
                 "accuracy": "Accuracy",
                 "f1": "F1 Score",
                 "roc_auc": "AUC-ROC",
-                "average_precision": "Average Precision",
+                "average_precision": "AUC-PR",
             }
         ),
         use_container_width=True,
